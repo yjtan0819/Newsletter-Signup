@@ -28,7 +28,7 @@
   </head>
 
   <body class="text-center">
-    <form class="form-signin">
+    <form class="form-signin" action="/" method="post">
       <img
         class="mb-4"
         src="images/news-530220__340.webp"
@@ -40,6 +40,7 @@
 
       <input
         type="text"
+        name="firstName"
         class="form-control top"
         placeholder="First Name"
         required
@@ -47,18 +48,20 @@
       />
       <input
         type="text"
+        name="lastName"
         class="form-control middle"
         placeholder="Last Name"
         required
       />
       <input
         type="email"
+        name="email"
         class="form-control bottom"
         placeholder="Email"
         required
       />
       <button class="btn btn-lg btn-primary btn-block" type="submit">
-        Sign un
+        Sign up
       </button>
       <p class="mt-5 mb-3 text-muted">&copy; Yi Jia Tan</p>
     </form>
