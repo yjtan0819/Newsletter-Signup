@@ -6,6 +6,9 @@ const app = express();
 const port = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+<script type='text/javascript' src='config.js'></script>
+var myKey = config.api;
+var myList = config.list;
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/signup.html");
@@ -28,11 +31,11 @@ app.post("/", (req, res) => {
         ]
     };
     var jsonData = JSON.stringify(data);
-    const url = "https://us11.api.mailchimp.com/3.0/lists/517aff78d8";
+    const url = "https://us11.api.mailchimp.com/3.0/lists/" + myList;
 
     const options = {
         method: "POST",
-        auth: "yjtan0819:98c0760c999197e2c5b2b5a26cfef403-us11"
+        auth: "yjtan0819:" + myKey
     }
 
     const request = https.request(url, options, function(response) {
