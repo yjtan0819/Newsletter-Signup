@@ -4,7 +4,7 @@ const request = require("request");
 const https = require("https");
 const app = express();
 const port = 3000;
-const config = require("./config");
+const config = require("./config.json");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 var myKey = config.api;
@@ -31,11 +31,11 @@ app.post("/", (req, res) => {
         ]
     };
     var jsonData = JSON.stringify(data);
-    const url = "https://us11.api.mailchimp.com/3.0/lists/" + myList;
+    const url = "https://us11.api.mailchimp.com/3.0/lists/" + myList + "";
 
     const options = {
         method: "POST",
-        auth: "yjtan0819:" + myKey
+        auth: "yjtan0819:" + myKey+ ""
     }
 
     const request = https.request(url, options, function(response) {
