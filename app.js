@@ -4,9 +4,9 @@ const request = require("request");
 const https = require("https");
 const app = express();
 const port = 3000;
+const config = require("./config");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-<script type='text/javascript' src='config.js'></script>
 var myKey = config.api;
 var myList = config.list;
 
