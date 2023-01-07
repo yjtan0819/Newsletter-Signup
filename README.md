@@ -1,1 +1,1 @@
-Newsletter
+Newsletter Signup Form using MailChimp API, Bootstrap, Node.js, Express.js, and JavaScript
